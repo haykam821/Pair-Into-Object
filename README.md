@@ -1,4 +1,4 @@
-# Pair Into Object
+# Pair Into Object [![Build Status](https://travis-ci.org/haykam821/Pair-Into-Object.svg?branch=master)](https://travis-ci.org/haykam821/Pair-Into-Object)
 
 This single-function library merges two arrays of keys and values respectively into a single object.
 
