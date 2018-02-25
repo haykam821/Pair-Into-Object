@@ -37,7 +37,7 @@ describe("the function", function() {
         }, TypeError);
     });
 
-    it("should work", function() {
-        assert.strictEqual(exampleOutput, pair(exampleKeys, exampleValues));
+    it("should map arguments[0][i] to arguments[1][i]", function() {
+        assert.deepEqual(exampleOutput, pair(exampleKeys, exampleValues));
     })
 });
