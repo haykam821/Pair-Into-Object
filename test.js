@@ -37,6 +37,17 @@ describe("the function", function() {
         }, TypeError);
     });
 
+    it("should error if first array is longer than the second", function () {
+        assert.throws(function () {
+            pair(["this", "array", "is", "longer"], ["than", "this", "one"])
+        }, Error);
+    })
+    it("should error if second array is longer than the first", function () {
+        assert.throws(function () {
+            pair(["and", "this", "array"], ["is", "shorter", "than", "this"])
+        }, Error);
+    })
+
     it("should map arguments[0][i] to arguments[1][i]", function() {
         assert.deepEqual(exampleOutput, pair(exampleKeys, exampleValues));
     })
