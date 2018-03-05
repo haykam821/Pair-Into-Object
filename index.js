@@ -1,16 +1,20 @@
-function pair(keys, values) {
+function pair(keys, values, fillMissing = true) {
     const object = {};
 
     if (!Array.isArray(keys)) {
         throw new TypeError("Keys must be an array");
     } else if (!Array.isArray(values)) {
         throw new TypeError("Values must be an array");
-    } else if (keys.length !== values.length) {
+    } else if (keys.length < values.length) {
         throw new Error("Lengths of keys and values must be the same");
     }
 
     keys.forEach((element, index) => {
-        object[element] = values[index];
+        if (fillMissing) {
+            object[element] = values[index] || null;
+        } else {
+            object[element] = values[index];
+        }
     });
 
     return object;
