@@ -64,9 +64,9 @@ describe("type errors (second parameter)", function() {
 });
 
 describe("input lengths mismatch errors", function() {
-    it("should error if first array is longer than the second", function () {
+    it("should error if first array is longer than the second and matching w/ null disabled", function () {
         assert.throws(function () {
-            pair(["this", "array", "is", "longer"], ["than", "this", "one"])
+            pair(["this", "array", "is", "longer"], ["than", "this", "one"], false)
         }, Error);
     })
     it("should error if second array is longer than the first", function () {
