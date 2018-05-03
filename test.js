@@ -3,10 +3,10 @@ const assert = chai.assert;
 
 const pair = require("./index.js");
 
-const string = "a string";
-const number = 1337;
-const object = {"id": 9999, "name": "George"};
-const arrayishObject = {0: "hello", 1: "world"};
+const string = "to be or not to be";
+const number = 9001;
+const object = { "foo": 1, "bar": "banana" };
+const arrayishObject = { 0: "eval is", 1: "not safe" };
 
 const exampleKeys = ["key1", "key2", "key3"];
 const exampleValues = ["value1", "value2", "value3"];
