@@ -9,13 +9,21 @@ function pair(keys, values, fillMissing = true) {
 	const object = {};
 
 	if (!Array.isArray(keys)) {
-		throw new TypeError("Keys must be an array");
+		const error = new TypeError("Keys must be an array");
+		error.code = "KEYS_NOT_ARRAY";
+		throw error;
 	} else if (!Array.isArray(values)) {
-		throw new TypeError("Values must be an array");
+		const error = new TypeError("Values must be an array");
+		error.code = "VALUES_NOT_ARRAY";
+		throw error;
 	} else if (keys.length < values.length) {
-		throw new Error("Cannot have more keys than values");
+		const error = new Error("Cannot have more keys than values");
+		error.code = "NOT_ENOUGH_KEYS";
+		throw error;
 	} else if (keys.length !== values.length && !fillMissing) {
-		throw new Error("Lengths of keys and values must be the same");
+		const error = new Error("Lengths of keys and values must be the same");
+		error.code = "DIFFERENT_KEY_VALUE_ARRAY_LENGTHS";
+		throw error;
 	}
 
 	keys.forEach((element, index) => {
