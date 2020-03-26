@@ -2,19 +2,25 @@
 const chai = require("chai");
 const assert = chai.assert;
 
-const pair = require("./index.js");
+const pair = require(".");
 
 const string = "to be or not to be";
 const number = 9001;
-const object = { "foo": 1, "bar": "banana" };
-const arrayishObject = { 0: "eval is", 1: "not safe" };
+const object = {
+	bar: "banana",
+	foo: 1,
+};
+const arrayishObject = {
+	0: "eval is",
+	1: "not safe",
+};
 
 const exampleKeys = ["key1", "key2", "key3"];
 const exampleValues = ["value1", "value2", "value3"];
 const exampleOutput = {
-	"key1": "value1",
-	"key2": "value2",
-	"key3": "value3",
+	key1: "value1",
+	key2: "value2",
+	key3: "value3",
 };
 const examplesOutput = pair(exampleKeys, exampleValues);
 

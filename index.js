@@ -1,3 +1,10 @@
+/**
+ * Pairs an array of keys and an array of values into an object.
+ * @param {*[]} keys The keys for the object.
+ * @param {*[]} values The values for the object.
+ * @param {boolean} fillMissing Whether to fill entries without a value in the values array with null.
+ * @returns {Object} The paired object.
+ */
 function pair(keys, values, fillMissing = true) {
 	const object = {};
 
